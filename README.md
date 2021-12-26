@@ -6,6 +6,7 @@ The arrow marks the direction of the edge and where it is linked.
 The small rectangles within which there are a decimal number that are on the arrow mark the weight of the edge while the rectangle farther from the point (src) marks the weight up to the point (dest that the rectangle is closer to).
 ### Initial run of T0.json file
 **pic 1:** Initial execution of T0.json file This file does not receive pos data (the geographical location of the node) so when the algorithm "loads" the file and adds the data to the data structures in DiGraph it creates random data for pos so that x will be a decimal number between 35 and 36 (Not including 36) and y will be a decimal number between 32 and 33 (not including 33).
+
 <img width="490" alt="1" src="https://user-images.githubusercontent.com/93534494/147417503-aa046ab2-77e0-4c5d-8def-d3f8ceb5087c.png">
 
 ### "CENTER_POINT" button in the menu of an unconnected graph
@@ -120,7 +121,3 @@ pic 22 so there can be no midpoint for the graph.
 **pic 26:** Marked with the red edge added according to the details of Figure 25 (whose origin is 0 and target is 17 and weight is 11).
 
 <img width="494" alt="26" src="https://user-images.githubusercontent.com/93534494/147418747-f029ce53-3636-485a-bf34-de4f91f45e5e.png">
-
-
-
-
