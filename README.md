@@ -199,4 +199,8 @@ tkinter
 
 ![compare_result](https://user-images.githubusercontent.com/93534494/147481581-1b93953f-c150-4a76-bdca-9e3f74dce9e8.png)
 
+## UML:
+
+![uml](https://user-images.githubusercontent.com/93534494/147485906-b20d9c7d-0bbb-453a-90d9-e165e127bb12.jpg)
+
 
