@@ -47,15 +47,15 @@ There is a variable that maintains the maximum distance from one vertex to anoth
 The vertex that is in the variable after we have checked the maximum distance from all the vertices is the center point and this is the vertex that we return.
 
 ## How to run and use the graphical interface:
-Activating the plot_graph function in the GraphAlgo class that receives the DiGraph parameter activates the graphical interface.
-The graphical GUI interface is used in a way that obtains a DiGraph parameter that contains the information needed to create the graph.
-The screen initializes by displaying the DiGraph parameter in the graph by vertices and edge.
-There are menus on the screen that contain the options to display the results of the algorithms that appear in the GraphAlgoInterface interface and the GraphInterface interface.
-Each click on one of the options in the menu if the function should have parameters will open to the user an option of selecting the required parameters and then displaying the results obtained from the functions on the graph in bold or by way of message.
-The GUI works through a pygame and thus displays the directed graph that receives its details for creating the graph.
-The dots represent the nodes within each node listed the id of the node
-The arrow marks the direction of the edge and where it is linked.
-The small rectangles within which there are a decimal number that are on the arrow mark the weight of the edge while the rectangle farther from the point (src) marks the weight up to the point (dest that the rectangle is closer to).
+- Activating the plot_graph function in the GraphAlgo class that receives the DiGraph parameter activates the graphical interface.
+- The graphical GUI interface is used in a way that obtains a DiGraph parameter that contains the information needed to create the graph.
+- The screen initializes by displaying the DiGraph parameter in the graph by vertices and edge.
+- There are menus on the screen that contain the options to display the results of the algorithms that appear in the GraphAlgoInterface interface and the GraphInterface interface.
+- Each click on one of the options in the menu if the function should have parameters will open to the user an option of selecting the required parameters and then displaying - the results obtained from the functions on the graph in bold or by way of message.
+- The GUI works through a pygame and thus displays the directed graph that receives its details for creating the graph.
+- The dots represent the nodes within each node listed the id of the node
+- The arrow marks the direction of the edge and where it is linked.
+- The small rectangles within which there are a decimal number that are on the arrow mark the weight of the edge while the rectangle farther from the point (src) marks the weight up to the point (dest that the rectangle is closer to).
 ### Initial run of T0.json file
 **pic 1:** Initial execution of [T0.json](https://github.com/eynavbe/OOP_Ex2_python/blob/main/Ex3/data/T0.json) file This file does not receive pos data (the geographical location of the node) so when the algorithm "loads" the file and adds the data to the data structures in DiGraph it creates random data for pos so that x will be a decimal number between 35 and 36 (Not including 36) and y will be a decimal number between 32 and 33 (not including 33).
 
