@@ -1,4 +1,4 @@
-# OOP_Ex2_python
+# OOP_Ex3_python
 The algorithm gets vertices and edges and matches them to each other, checking paths, binding components.
 The algorithm, in other words, produces a graph and executes all sorts of operations on it. (in python)
 
@@ -179,6 +179,8 @@ tkinter
 ## Comparing run results of given graphs between Java and Python:
 The graphs that have been compared are: A0, A1, A2, A3, A4, A5, T0, 1000Nodes, 10000Nodes, 100000Nodes and 1000000Nodes.
 The functions on which the comparison is made are: load and save, centerPoint, TSP, shortestPath. 
+Computer specifications where tests were performed: Lenovo V14-IIL, Intel Core i5-1035G, 14.0 1920x1080 14.0 FHD, Windows 10 Pro 64, 4.0GB, 1x512GB SSD PCI e NVMe.
+
 |                | Load and save  |                | shortest_Path	|                | 	     TSP      |                |  centerPoint   |                |
 |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |
 |                | python         | java           | python         | java           | python         | java           | python         | java           |
@@ -194,8 +196,7 @@ The functions on which the comparison is made are: load and save, centerPoint, T
 |100,000Nodes    |21 sec 810 ms   |13 sec 767 ms   |7 min 4 sec	    |44 sec          |-	              |-	             |    -           |-	             |      
 |millionNodes    |14 sec 130 ms   |14 sec 24 ms    |      -   	    |200 ms          | 	 -            |-	             |    -           |-	             |      
                   
-![compare_result](https://user-images.githubusercontent.com/93534494/147479293-d7a0b4da-f30e-4fe1-b503-317fe0909da7.png)
 
+![compare_result](https://user-images.githubusercontent.com/93534494/147481581-1b93953f-c150-4a76-bdca-9e3f74dce9e8.png)
 
-## UML:
 
