@@ -55,7 +55,7 @@ The dots represent the nodes within each node listed the id of the node
 The arrow marks the direction of the edge and where it is linked.
 The small rectangles within which there are a decimal number that are on the arrow mark the weight of the edge while the rectangle farther from the point (src) marks the weight up to the point (dest that the rectangle is closer to).
 ### Initial run of T0.json file
-**pic 1:** Initial execution of [T0.json](https://github.com/eynavbe/OOP_Ex2_python/blob/main/Ex3/data/tNew.json) file This file does not receive pos data (the geographical location of the node) so when the algorithm "loads" the file and adds the data to the data structures in DiGraph it creates random data for pos so that x will be a decimal number between 35 and 36 (Not including 36) and y will be a decimal number between 32 and 33 (not including 33).
+**pic 1:** Initial execution of [T0.json](https://github.com/eynavbe/OOP_Ex2_python/blob/main/Ex3/data/T0.json) file This file does not receive pos data (the geographical location of the node) so when the algorithm "loads" the file and adds the data to the data structures in DiGraph it creates random data for pos so that x will be a decimal number between 35 and 36 (Not including 36) and y will be a decimal number between 32 and 33 (not including 33).
 
 <img width="490" alt="1" src="https://user-images.githubusercontent.com/93534494/147417503-aa046ab2-77e0-4c5d-8def-d3f8ceb5087c.png">
 
@@ -91,7 +91,7 @@ The small rectangles within which there are a decimal number that are on the arr
 
 <img width="488" alt="8" src="https://user-images.githubusercontent.com/93534494/147418083-746445c2-4896-40ab-b294-5584da065b9d.png">
 
-**pic 9:** By pressing the "LOAD_FILE" button in the menu, the button changes color to dark pink, by the clicking "LOAD_FILE" button a screen opens where you select the file you want to display on the graph and then click "Open", if the file is incorrect you will get an error message . pic 9 is an example when a valid file is selected. The [A1.json](https://github.com/eynavbe/OOP_Ex2_python/blob/main/Ex3/data/tNew.json) file is attached to the data folder.
+**pic 9:** By pressing the "LOAD_FILE" button in the menu, the button changes color to dark pink, by the clicking "LOAD_FILE" button a screen opens where you select the file you want to display on the graph and then click "Open", if the file is incorrect you will get an error message . pic 9 is an example when a valid file is selected. The [A1.json](https://github.com/eynavbe/OOP_Ex2_python/blob/main/Ex3/data/A1.json) file is attached to the data folder.
 
 <img width="557" alt="9" src="https://user-images.githubusercontent.com/93534494/147418085-cd02e9a2-5647-4666-9ca5-fc5d396b9878.png">
 
