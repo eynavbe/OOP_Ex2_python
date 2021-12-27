@@ -1,5 +1,55 @@
 # OOP_Ex2_python
-## 
+The algorithm gets vertices and edges and matches them to each other, checking paths, binding components.
+The algorithm, in other words, produces a graph and executes all sorts of operations on it. (in python)
+
+##class and “interfaces”:
+**GraphInterface:** This abstract class represents an interface of a graph.
+-	v_size(self): Returns the number of vertices in this graph.
+- e_size(self): Returns the number of edges in this graph.       
+- get_all_v(self):  return a dictionary of all the nodes in the Graph, each node is represented using a pair (node_id, node_data).
+- all_in_edges_of_node(self, id1: int): return a dictionary of all the nodes connected to (into) node_id , each node is represented using a pair (other_node_id, weight).
+- all_out_edges_of_node(self, id1: int): return a dictionary of all the nodes connected from node_id , each node is represented using a pair (other_node_id, weight).
+- get_mc(self): Returns the current version of this graph.
+- add_edge(self, id1: int, id2: int, weight: float):  Adds an edge to the graph.   
+(id1: The start node of the edge, id2: The end node of the edge, weight: The weight of the edge) . return true if the edge was added successfully, False o.w.
+- add_node(self,  node_id: int, pos: tuple = None):   Adds a node to the graph. (node_id: The node ID, pos: The position of the node). 
+return true if the node was added successfully, False o.w.
+- remove_node(self, node_id: int):  Removes a node from the graph. return true if the node was removed successfully, False o.w.
+- remove_edge(self, node_id1: int, node_id2: int): return true if the edge was removed successfully, False o.w.
+
+**DiGraph:**  Implementing an Interface GraphInterface.
+Data structures in digraph- node_list: dict, in_edge: dict, out_edge: dict.
+
+**GraphAlgoInterface:** This abstract class represents an interface of a graph.
+-	get_graph(self): return the directed graph on which the algorithm works on.
+-	load_from_json(self, file_name: str): Loads a graph from a json file. returns True if the loading was successful, False o.w.
+-	save_to_json(self, file_name: str): Saves the graph in JSON format to a file. Return true if the save was successful, False o.w.
+-	shortest_path(self, id1: int, id2: int):   Returns the shortest path from node id1 to node id2 using Dijkstra's Algorithm.  Return the distance of the path and a list of the nodes ids that the path goes through. More info:         https://en.wikipedia.org/wiki/Dijkstra's_algorithm 
+-	TSP(self, node_lst: List[int]): Finds the shortest path that visits all the nodes in the list. Return a list of the nodes id's in the path, and the overall distance
+-	centerPoint(self): Finds the node that has the shortest distance to it's farthest node and return this node.
+-	plot_graph(self): Plots the graph. If the nodes have a position, the nodes are  placed there.  Otherwise, they are  placed in a random but elegant manner.
+
+**GraphAlgo:**  Implementing an Interface GraphAlgoInterface.
+
+**Main:** use to check the names of our algorithm.    
+**GraphView:**  Creates a drawing of a graph (with directional edges, vertices - with their id, weight of each edge, and a menu to the function we performed in the graph).
+**TestDiGraph:** test class DiGraph.
+**TestGraphAlgo:** test class GraphAlgo.
+
+## How the main functions in the algorithm works:
+**shortest_path:** Goes through all the pathes that are from the source to the destination. And returns the path with the lowest weight. Use dijkstra algorithm. (https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) 
+**Tsp:** The function checks which route is the shortest (with the least weight) according to the given list.
+The function works by checking the shortest route in each of the order options of the list and updating the variable of the minimum route.
+**Center:** Each of the vertices is sent to shortest_Path.
+There is a variable that maintains the maximum distance from one vertex to another. Whenever a smaller maximum distance is found with a different vertex we will replace, and set it in the variable.
+The vertex that is in the variable after we have checked the maximum distance from all the vertices is the center point and this is the vertex that we return.
+
+## How to download, run and use the graphical interface:
+Activating the plot_graph function in the GraphAlgo class that receives the DiGraph parameter activates the graphical interface.
+The graphical GUI interface is used in a way that obtains a DiGraph parameter that contains the information needed to create the graph.
+The screen initializes by displaying the DiGraph parameter in the graph by vertices and edge.
+There are menus on the screen that contain the options to display the results of the algorithms that appear in the GraphAlgoInterface interface and the GraphInterface interface.
+Each click on one of the options in the menu if the function should have parameters will open to the user an option of selecting the required parameters and then displaying the results obtained from the functions on the graph in bold or by way of message.
 The GUI works through a pygame and thus displays the directed graph that receives its details for creating the graph.
 The dots represent the nodes within each node listed the id of the node
 The arrow marks the direction of the edge and where it is linked.
@@ -121,3 +171,31 @@ pic 22 so there can be no midpoint for the graph.
 **pic 26:** Marked with the red edge added according to the details of Figure 25 (whose origin is 0 and target is 17 and weight is 11).
 
 <img width="494" alt="26" src="https://user-images.githubusercontent.com/93534494/147418747-f029ce53-3636-485a-bf34-de4f91f45e5e.png">
+
+### Import libraries:
+pygame
+tkinter
+
+## Comparing run results of given graphs between Java and Python:
+The graphs that have been compared are: A0, A1, A2, A3, A4, A5, T0, 1000Nodes, 10000Nodes, 100000Nodes and 1000000Nodes.
+The functions on which the comparison is made are: load and save, centerPoint, TSP, shortestPath. 
+|                | Load and save  |                | shortest_Path	|                | 	     TSP      |                |  centerPoint   |                |
+|     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |
+|                | python         | java           | python         | java           | python         | java           | python         | java           |
+|A0	             |0 ms	          |264 ms          |0 ms            | 0 ms	         |15 ms	          |5 ms	           |0 ms	          | 0 ms           |
+|A1 (=G1)	       |0 ms	          |274 ms          |0 ms            | 0 ms	         |69 ms	          |226 ms	         |0 ms	          | 50 ms          |                 
+|A2 (=G2)	       |0 ms	          |284 ms          |0 ms            | 0 ms	         |169 ms          |245 ms	         |84 ms	          | 50 ms          |        
+|A3	             |1 ms	          |255 ms          |0 ms            | 0 ms	         |300 ms          |130 ms	         |399 ms          |360 ms          |        
+|A4	             |0 ms	          |258 ms          |0 ms            | 0 ms	         |269 ms          |80 ms	         |184 ms          |310 ms          |        
+|A5 (=G3)	       |15 ms	          |310 ms          |0 ms            | 0 ms	         |285 ms          |100 ms	         |433 ms          |4 sec 500 ms    |              
+|T0	             |0 ms	          |285 ms          |0 ms            | 0 ms	         |0 ms	          |0 ms	           |0 ms	          | 0 ms           |        
+|1,000Nodes	     |1 sec 10 ms     |463 ms          |	37 ms	        |90 ms	         |624 ms	        |700 ms          |-               | -              |    
+|10,000Nodes     |580 ms          |842 ms          |3 sec 725 ms    |550 ms          |48 sec 337 ms   |3 sec 10 ms	   |-               |	-              |    
+|100,000Nodes    |21 sec 810 ms   |13 sec 767 ms   |7 min 4 sec	    |44 sec          |-	              |-	             |    -           |-	             |      
+|millionNodes    |14 sec 130 ms   |14 sec 24 ms    |      -   	    |200 ms          | 	 -            |-	             |    -           |-	             |      
+                  
+![compare_result](https://user-images.githubusercontent.com/93534494/147479293-d7a0b4da-f30e-4fe1-b503-317fe0909da7.png)
+
+
+## UML:
+
