@@ -2,7 +2,7 @@
 The algorithm gets vertices and edges and matches them to each other, checking paths, binding components.
 The algorithm, in other words, produces a graph and executes all sorts of operations on it. (in python)
 
-##class and “interfaces”:
+## class and “interfaces”:
 **GraphInterface:** This abstract class represents an interface of a graph.
 -	v_size(self): Returns the number of vertices in this graph.
 - e_size(self): Returns the number of edges in this graph.       
@@ -44,7 +44,7 @@ The function works by checking the shortest route in each of the order options o
 There is a variable that maintains the maximum distance from one vertex to another. Whenever a smaller maximum distance is found with a different vertex we will replace, and set it in the variable.
 The vertex that is in the variable after we have checked the maximum distance from all the vertices is the center point and this is the vertex that we return.
 
-## How to download, run and use the graphical interface:
+## How to run and use the graphical interface:
 Activating the plot_graph function in the GraphAlgo class that receives the DiGraph parameter activates the graphical interface.
 The graphical GUI interface is used in a way that obtains a DiGraph parameter that contains the information needed to create the graph.
 The screen initializes by displaying the DiGraph parameter in the graph by vertices and edge.
@@ -55,7 +55,7 @@ The dots represent the nodes within each node listed the id of the node
 The arrow marks the direction of the edge and where it is linked.
 The small rectangles within which there are a decimal number that are on the arrow mark the weight of the edge while the rectangle farther from the point (src) marks the weight up to the point (dest that the rectangle is closer to).
 ### Initial run of T0.json file
-**pic 1:** Initial execution of T0.json file This file does not receive pos data (the geographical location of the node) so when the algorithm "loads" the file and adds the data to the data structures in DiGraph it creates random data for pos so that x will be a decimal number between 35 and 36 (Not including 36) and y will be a decimal number between 32 and 33 (not including 33).
+**pic 1:** Initial execution of [T0.json](https://github.com/eynavbe/OOP_Ex2_python/blob/main/Ex3/data/tNew.json) file This file does not receive pos data (the geographical location of the node) so when the algorithm "loads" the file and adds the data to the data structures in DiGraph it creates random data for pos so that x will be a decimal number between 35 and 36 (Not including 36) and y will be a decimal number between 32 and 33 (not including 33).
 
 <img width="490" alt="1" src="https://user-images.githubusercontent.com/93534494/147417503-aa046ab2-77e0-4c5d-8def-d3f8ceb5087c.png">
 
@@ -78,7 +78,7 @@ The small rectangles within which there are a decimal number that are on the arr
 
 <img width="568" alt="5" src="https://user-images.githubusercontent.com/93534494/147417986-90e2a69a-7e81-43b3-9370-5858193a1983.png">
 
-**pic 6:** Proof that the file was saved in the location you chose to save with the name. The saved file is attached to the date folder.
+**pic 6:** [Proof](https://github.com/eynavbe/OOP_Ex2_python/blob/main/Ex3/data/tNew.json) that the file was saved in the location you chose to save with the name. The saved file is attached to the date folder.
 
 <img width="638" alt="6" src="https://user-images.githubusercontent.com/93534494/147417995-c99679c9-50bc-44d2-9258-b661c170ce0b.png">
 
@@ -91,7 +91,7 @@ The small rectangles within which there are a decimal number that are on the arr
 
 <img width="488" alt="8" src="https://user-images.githubusercontent.com/93534494/147418083-746445c2-4896-40ab-b294-5584da065b9d.png">
 
-**pic 9:** By pressing the "LOAD_FILE" button in the menu, the button changes color to dark pink, by the clicking "LOAD_FILE" button a screen opens where you select the file you want to display on the graph and then click "Open", if the file is incorrect you will get an error message . pic 9 is an example when a valid file is selected. The A1.json file is attached to the data folder.
+**pic 9:** By pressing the "LOAD_FILE" button in the menu, the button changes color to dark pink, by the clicking "LOAD_FILE" button a screen opens where you select the file you want to display on the graph and then click "Open", if the file is incorrect you will get an error message . pic 9 is an example when a valid file is selected. The [A1.json](https://github.com/eynavbe/OOP_Ex2_python/blob/main/Ex3/data/tNew.json) file is attached to the data folder.
 
 <img width="557" alt="9" src="https://user-images.githubusercontent.com/93534494/147418085-cd02e9a2-5647-4666-9ca5-fc5d396b9878.png">
 
@@ -177,24 +177,24 @@ pygame
 tkinter
 
 ## Comparing run results of given graphs between Java and Python:
-The graphs that have been compared are: A0, A1, A2, A3, A4, A5, T0, 1000Nodes, 10000Nodes, 100000Nodes and 1000000Nodes.
-The functions on which the comparison is made are: load and save, centerPoint, TSP, shortestPath. 
-Computer specifications where tests were performed: Lenovo V14-IIL, Intel Core i5-1035G, 14.0 1920x1080 14.0 FHD, Windows 10 Pro 64, 4.0GB, 1x512GB SSD PCI e NVMe.
+**The graphs that have been compared are:** A0, A1, A2, A3, A4, A5, T0, 1000Nodes, 10000Nodes, 100000Nodes and 1000000Nodes.
+**The functions on which the comparison is made are:** load and save, centerPoint, TSP, shortestPath. 
+**Computer specifications where tests were performed:** Lenovo V14-IIL, Intel Core i5-1035G, 14.0 1920x1080 14.0 FHD, Windows 10 Pro 64, 4.0GB, 1x512GB SSD PCI e NVMe.
 
-|                | Load and save  |                | shortest_Path	|                | 	     TSP      |                |  centerPoint   |                |
+|                | Load and save  |                |shortest_Path 	|                | 	     TSP      |                |  centerPoint   |                |
 |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |
 |                | python         | java           | python         | java           | python         | java           | python         | java           |
 |A0	             |0 ms	          |264 ms          |0 ms            | 0 ms	         |15 ms	          |5 ms	           |0 ms	          | 0 ms           |
-|A1 (=G1)	       |0 ms	          |274 ms          |0 ms            | 0 ms	         |69 ms	          |226 ms	         |0 ms	          | 50 ms          |                 
-|A2 (=G2)	       |0 ms	          |284 ms          |0 ms            | 0 ms	         |169 ms          |245 ms	         |84 ms	          | 50 ms          |        
-|A3	             |1 ms	          |255 ms          |0 ms            | 0 ms	         |300 ms          |130 ms	         |399 ms          |360 ms          |        
-|A4	             |0 ms	          |258 ms          |0 ms            | 0 ms	         |269 ms          |80 ms	         |184 ms          |310 ms          |        
-|A5 (=G3)	       |15 ms	          |310 ms          |0 ms            | 0 ms	         |285 ms          |100 ms	         |433 ms          |4 sec 500 ms    |              
-|T0	             |0 ms	          |285 ms          |0 ms            | 0 ms	         |0 ms	          |0 ms	           |0 ms	          | 0 ms           |        
-|1,000Nodes	     |1 sec 10 ms     |463 ms          |	37 ms	        |90 ms	         |624 ms	        |700 ms          |-               | -              |    
-|10,000Nodes     |580 ms          |842 ms          |3 sec 725 ms    |550 ms          |48 sec 337 ms   |3 sec 10 ms	   |-               |	-              |    
-|100,000Nodes    |21 sec 810 ms   |13 sec 767 ms   |7 min 4 sec	    |44 sec          |-	              |-	             |    -           |-	             |      
-|millionNodes    |14 sec 130 ms   |14 sec 24 ms    |      -   	    |200 ms          | 	 -            |-	             |    -           |-	             |      
+|A1 (=G1)	       |0 ms	          |274 ms          |0 ms            | 0 ms	         |69 ms	          |226 ms	         |0 ms	          | 50 ms          |
+|A2 (=G2)	       |0 ms	          |284 ms          |0 ms            | 0 ms	         |169 ms          |245 ms	         |84 ms	          | 50 ms          |
+|A3	             |1 ms	          |255 ms          |0 ms            | 0 ms	         |300 ms          |130 ms	         |399 ms          |360 ms          |
+|A4	             |0 ms	          |258 ms          |0 ms            | 0 ms	         |269 ms          |80 ms	         |184 ms          |310 ms          |
+|A5 (=G3)	       |15 ms	          |310 ms          |0 ms            | 0 ms	         |285 ms          |100 ms	         |433 ms          |4 sec 500 ms    |
+|T0	             |0 ms	          |285 ms          |0 ms            | 0 ms	         |0 ms	          |0 ms	           |0 ms	          | 0 ms           |
+|1,000Nodes	     |1 sec 10 ms     |463 ms          |	37 ms	        |90 ms	         |624 ms	        |700 ms          |-               | -              |
+|10,000Nodes     |580 ms          |842 ms          |3 sec 725 ms    |550 ms          |48 sec 337 ms   |3 sec 10 ms	   |-               |	-              |
+|100,000Nodes    |21 sec 810 ms   |13 sec 767 ms   |7 min 4 sec	    |44 sec          |-	              |-	             |    -           |-	             |
+|millionNodes    |14 sec 130 ms   |14 sec 24 ms    |      -   	    |200 ms          | 	 -            |-	             |    -           |-	             |
                   
 
 ![compare_result](https://user-images.githubusercontent.com/93534494/147481581-1b93953f-c150-4a76-bdca-9e3f74dce9e8.png)
