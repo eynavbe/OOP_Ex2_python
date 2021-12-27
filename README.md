@@ -1,6 +1,8 @@
 # OOP_Ex3_python
 The algorithm gets vertices and edges and matches them to each other, checking paths, binding components.
 The algorithm, in other words, produces a graph and executes all sorts of operations on it. (in python)
+### [wiki](https://github.com/eynavbe/OOP_Ex3_python.wiki.git)
+
 
 ## class and “interfaces”:
 **GraphInterface:** This abstract class represents an interface of a graph.
